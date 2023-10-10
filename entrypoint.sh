@@ -1,7 +1,5 @@
 #!/bin/ash
 
-RUN npm install http-server
-
 SRV_PORT=${SRV_PORT:-8000}
 
 VITE_API_BASE=${OPENAI_API_BASE:-https://its-llamarama.ucsd.edu/}
