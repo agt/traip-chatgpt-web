@@ -2,7 +2,7 @@ FROM node:18-alpine
 
 RUN mkdir /chatgpt-web && chmod 1777 /chatgpt-web && cd /chatgpt-web && \
     wget -O - \
-    https://api.github.com/repos/Niek/chatgpt-web/tarball/5f41779af205281774b75781eebcd944d7d9e075 \
+    https://api.github.com/repos/Niek/chatgpt-web/tarball/cea07577d432bca09208fe84db94af8f25e98f07 \
         | tar xvzf - --strip-components 1
 
 WORKDIR /chatgpt-web
