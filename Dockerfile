@@ -9,9 +9,9 @@ WORKDIR /chatgpt-web
 
 RUN npm install http-server
 
-COPY vita.env .env
+RUN npm ci
 
-RUN npm ci && npm run build:github && ln -s . dist/chatgpt-web
+COPY --chmod=0755 entrypoint.sh /entrypoint.sh
 
-CMD node_modules/http-server/bin/http-server dist/ -p 8000 -d false --no-dotfiles -r --log-ip
+CMD /entrypoint.sh
 
