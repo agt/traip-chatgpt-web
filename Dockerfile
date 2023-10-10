@@ -11,7 +11,7 @@ RUN npm install http-server
 
 COPY vita.env .env
 
-RUN npm ci && npm run build:github && ln . dist/chatgpt-web
+RUN npm ci && npm run build:github && ln -s . dist/chatgpt-web
 
 CMD node_modules/http-server/bin/http-server dist/ -p 8000 -d false --no-dotfiles -r --log-ip
 
